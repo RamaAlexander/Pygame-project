@@ -1,4 +1,5 @@
 import sys
+import random
 import pygame
 from pygame.locals import *
 
@@ -12,11 +13,15 @@ while True:
             sys.exit()
     
     screen.fill((0, 80, 0))
+    pos_x1 = random.randint(0, 600)
+    pos_y1 = random.randint(0, 500)
+    pos_x2 = random.randint(0, 600)
+    pos_y2 = random.randint(0, 500)
     
     # draw the line
     color = 100, 255, 200
     width = 8
-    pygame.draw.line(screen, color, (100, 100), (500, 400), width)
+    pygame.draw.line(screen, color, (pos_x1, pos_y1), (pos_x2, pos_y2), width)
     
     pygame.display.update()
     
